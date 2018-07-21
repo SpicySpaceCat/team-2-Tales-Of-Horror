@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ammo
+  - Minor Armour
+  - Major Armour
+  - Minor Health
+  - Major Health
   layers:
   - Default
   - TransparentFX

@@ -117,9 +117,10 @@ public class JillianCharacterController : MonoBehaviour {
 			timeToShoot = Time.time + fireRateVialShort;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 2 && Time.time > timeToShoot){
+		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 2 && ammo > 0 && Time.time > timeToShoot){
 			Debug.Log("fire");
 			Instantiate (fireballProjectile, weaponSpawner.position, weaponSpawner.rotation);
+			ammo -= 1;
 			timeToShoot = Time.time + fireRateFireball;
 		}
 
@@ -153,6 +154,7 @@ public class JillianCharacterController : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "Minor Health" && health < 100) {
 			health += 25;
+			col.gameObject.SetActive (false);
 			if (health > 100) {
 				health = 100;
 			}
@@ -160,6 +162,7 @@ public class JillianCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Major Health" && health < 100) {
 			health += 75;
+			col.gameObject.SetActive (false);
 			if (health > 100) {
 				health = 100;
 			}
@@ -167,6 +170,7 @@ public class JillianCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Minor Armour" && armour < 100) {
 			armour += 25;
+			col.gameObject.SetActive (false);
 			if (armour > 100) {
 				armour = 100;
 			}
@@ -174,6 +178,7 @@ public class JillianCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Major Armour" && armour < 100) {
 			armour += 75;
+			col.gameObject.SetActive (false);
 			if (armour > 100) {
 				armour = 100;
 			}
@@ -181,6 +186,7 @@ public class JillianCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Ammo" && ammo < 10) {
 			ammo += 10;
+			col.gameObject.SetActive (false);
 			if (ammo > 10) {
 				ammo = 10;
 			}

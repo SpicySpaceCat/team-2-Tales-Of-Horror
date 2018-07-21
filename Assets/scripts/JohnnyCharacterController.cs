@@ -115,6 +115,13 @@ public class JohnnyCharacterController : MonoBehaviour {
 			timeToSlash = Time.time + fireRateSlash;
 		}
 
+		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && ammo >= 0 && Time.time > timeToSlash){
+			Debug.Log("fire");
+			Instantiate (throwingAxeProjectile, weaponSpawner.position, weaponSpawner.rotation);
+			ammo -= 1;
+			timeToSlash = Time.time + fireRateAxe;
+		}
+
 		if (armour > 0) {
 			armourStat = true;
 		} 
@@ -127,6 +134,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "Minor Health" && health < 100) {
 			health += 25;
+			col.gameObject.SetActive (false);
 			if (health > 100) {
 				health = 100;
 			}
@@ -134,6 +142,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Major Health" && health < 100) {
 			health += 75;
+			col.gameObject.SetActive (false);
 			if (health > 100) {
 				health = 100;
 			}
@@ -141,6 +150,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Minor Armour" && armour < 100) {
 			armour += 25;
+			col.gameObject.SetActive (false);
 			if (armour > 100) {
 				armour = 100;
 			}
@@ -148,6 +158,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Major Armour" && armour < 100) {
 			armour += 75;
+			col.gameObject.SetActive (false);
 			if (armour > 100) {
 				armour = 100;
 			}
@@ -155,6 +166,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Ammo" && ammo < 10) {
 			ammo += 10;
+			col.gameObject.SetActive (false);
 			if (ammo > 10) {
 				ammo = 10;
 			}
