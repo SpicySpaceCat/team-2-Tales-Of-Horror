@@ -9,6 +9,9 @@ TagManager:
   - Major Armour
   - Minor Health
   - Major Health
+  - AI Melee
+  - Enemy
+  - Vial
   layers:
   - Default
   - TransparentFX

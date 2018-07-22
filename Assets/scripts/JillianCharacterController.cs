@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class JillianCharacterController : MonoBehaviour {
+public class JillianCharacterController : MonoBehaviour 
+{
 	//---Movement---
 	private float currentSpeed = 6.0f;
 	public float walkSpeed = 6.0f;
@@ -44,7 +45,8 @@ public class JillianCharacterController : MonoBehaviour {
 	public GameObject impObject;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		currentWeapon = 1;
 		currentAttack = vialLongProjectile;
 		vials.SetActive (true);
@@ -54,7 +56,8 @@ public class JillianCharacterController : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		//Player Movement (WASD)
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * currentSpeed;
 		var z = Input.GetAxis("Vertical") * Time.deltaTime * currentSpeed;
@@ -151,7 +154,8 @@ public class JillianCharacterController : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider col) {
+	void OnTriggerEnter(Collider col) 
+	{
 		if (col.gameObject.tag == "Minor Health" && health < 100) {
 			health += 25;
 			col.gameObject.SetActive (false);
@@ -191,7 +195,10 @@ public class JillianCharacterController : MonoBehaviour {
 				ammo = 10;
 			}
 		}
+	}
 
+	void OnTriggerStay (Collider col)
+	{
 		if (col.gameObject.tag == "Enemy" && armourStat == true) {
 			armour -= 5;
 			if (armour <= 0) {
@@ -205,6 +212,7 @@ public class JillianCharacterController : MonoBehaviour {
 				Debug.Log ("Dead");
 			}
 		}
+	
 	}
 }
 
