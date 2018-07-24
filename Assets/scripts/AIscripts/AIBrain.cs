@@ -3,105 +3,163 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AIBrain : MonoBehaviour {
+public class AIBrain : MonoBehaviour
+{
 
-	Transform target;
-	Transform x;
-	Transform y;
-	Transform z;
-	Transform selfx;
-	Transform selfz;
-	float range;
-	private NavMeshAgent agent;
-	//public AImelee aimelee;
+    Transform target;
+    Transform x;
+    Transform y;
+    Transform z;
+    Transform selfx;
+    Transform selfz;
+    float range;
+    private NavMeshAgent agent;
+    //public AImelee aimelee;
 
-	public float health = 100;
-	public GameObject meleeHitbox;
-	public Transform spawnPoint;
-	float timeToShoot;
-	public float fireRate = 3.0f; 
-	public bool chase = false;
-	//public float rayLength = 100.0f;
+    public float health = 100;
+    //public GameObject meleeHitbox;
+    public Transform spawnPoint;
+    float timeToShoot;
+    public float fireRate = 3.0f;
+    public bool chase = false;
+    //public float rayLength = 100.0f;
+    public GameObject attackMove;
 
-	// Use this for initialization
-	void Start () {
-		target = GameObject.FindWithTag("Player").transform;
-		agent = gameObject.GetComponent<NavMeshAgent>();
-		//AImelee aimelee = gameObject.GetComponent<AImelee>().Attack;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+        agent = gameObject.GetComponent<NavMeshAgent>();
+    }
 
-		if (gameObject.CompareTag("AI Melee"))
-		{
-			range = 3.0f;
-		}
-		/*if (gameObject.CompareTag("AI Projectile"))
-		{
-			range = 12.0f;
-		}
-		if (gameObject.CompareTag("AI HitScan"))
-		{
-			range = 12.0f;
-		}*/
+    // Update is called once per frame
+    void Update()
+    {
+        transform.LookAt(target);
 
-		transform.LookAt(target);
-		float x = target.position.x;
-		float y = 1.0f;
-		float z = target.position.z;
+        if (gameObject.CompareTag("AI Melee"))
+        {
+            range = 3.0f;
+            attackMove = gameObject.GetComponent<AImelee>().meleeHitbox;
+            fireRate = 4.0f;
+        }
+        else if (gameObject.CompareTag("AI Projectile"))
+        {
+            range = 12.0f;
+            attackMove = gameObject.GetComponent<AIprojectile>().projectile;
+            fireRate = 5.0f;
+        }
+        /*if (gameObject.CompareTag("AI HitScan"))
+        {
+            range = 12.0f;
+        }*/
 
-		float distance = Vector3.Distance (gameObject.transform.position, target.position);
+        float x = target.position.x;
+        float y = 1.0f;
+        float z = target.position.z;
 
-		if (distance < 20) {
-			agent.SetDestination (new Vector3 (x, y, z));
-		} 
-		else 
-		{
-			
-		}
+        float distance = Vector3.Distance(gameObject.transform.position, target.position);
 
-		/*RaycastHit hit;
-		Ray rayHit = new Ray(transform.position, transform.forward);
-		Debug.DrawRay (transform.position, transform.forward * rayLength);
+        agent.SetDestination(new Vector3(x, y, z));
 
-		if (Physics.Raycast(rayHit, out hit, rayLength)) 
-		{
-			if (hit.collider.tag == "Player") 
-			{
-				chase = true;
-				rayLength = 0;
-			}
-		}*/
+        /*RaycastHit hit;
+        Ray rayHit = new Ray(transform.position, transform.forward);
+        Debug.DrawRay (transform.position, transform.forward * rayLength);
 
-		/*if (distance < 10) 
-		{
-			agent.enabled = !agent.enabled;
-		}*/
+        if (Physics.Raycast(rayHit, out hit, rayLength)) 
+        {
+            if (hit.collider.tag == "Player") 
+            {
+                chase = true;
+                rayLength = 0;
+            }
+        }*/
 
-		if (distance < range) {
-			agent.speed = 0.0f;
+        /*if (distance < 10) 
+        {
+            agent.enabled = !agent.enabled;
+        }*/
 
-			if (Time.time > timeToShoot) 
-			{
-				Instantiate (meleeHitbox, spawnPoint.position, spawnPoint.rotation);
-				timeToShoot = Time.time + fireRate;
-			}
-		} 
-		else 
-		{
-			agent.speed = 3.5f;
-		}
-	}
+        if (distance < range)
+        {
+            agent.speed = 0.0f;
 
-	void OnTriggerStay (Collider col)
-	{
-		if (col.gameObject.tag == "Vial") {
-			health -= 20;
-			if (health <= 0) {
-				Debug.Log ("Dead");
-				Destroy (gameObject);
-			}
-		}
-	}
+
+
+            if (Time.time > timeToShoot)
+            {
+                Instantiate(attackMove, spawnPoint.position, spawnPoint.rotation);
+                timeToShoot = Time.time + fireRate;
+            }
+        }
+        else
+        {
+            agent.speed = 3.5f;
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        //Jillian Attacks
+        if (col.gameObject.tag == "Vial")
+        {
+            health -= 20;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+
+        if (col.gameObject.tag == "Fireball")
+        {
+            health -= 60;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+
+        //Johnny Attacks
+        if (col.gameObject.tag == "Fists")
+        {
+            health -= 10;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+
+        if (col.gameObject.tag == "Sword")
+        {
+            health -= 40;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+
+        if (col.gameObject.tag == "Sword Slash")
+        {
+            health -= 30;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+
+        if (col.gameObject.tag == "Axe")
+        {
+            health -= 60;
+            if (health <= 0)
+            {
+                Debug.Log("Dead");
+                Destroy(gameObject);
+            }
+        }
+    }
 }

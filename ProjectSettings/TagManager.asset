@@ -12,6 +12,14 @@ TagManager:
   - AI Melee
   - Enemy
   - Vial
+  - Fists
+  - Sword
+  - Sword Slash
+  - Axe
+  - Fireball
+  - RedKey
+  - AI Projectile
+  - AI Shot
   layers:
   - Default
   - TransparentFX

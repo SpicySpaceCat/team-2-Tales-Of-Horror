@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472049745619830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 12.27, y: 1, z: -13.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4867044389057076}
@@ -195,7 +195,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1621322357024464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.4}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.5, y: 0.71383023, z: 0.71383023}
   m_Children: []
   m_Father: {fileID: 4752522780661748}
@@ -453,7 +453,7 @@ MonoBehaviour:
   walkSpeed: 6
   sprintSpeed: 10
   health: 100
-  armour: 1
+  armour: 0
   ammo: 10
   armourStat: 0
   mouseSpeed: 2

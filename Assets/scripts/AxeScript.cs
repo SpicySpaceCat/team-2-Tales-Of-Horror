@@ -13,7 +13,7 @@ public class AxeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.forward * speed);
-		Destroy(gameObject, 3);
+		Destroy(gameObject, 4);
 	}
 
 	void OnTriggerEnter(Collider col)

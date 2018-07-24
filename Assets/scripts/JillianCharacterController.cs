@@ -15,6 +15,7 @@ public class JillianCharacterController : MonoBehaviour
 	public float mana = 0;
 	private float moreMana;
 	public float manaRate = 10;
+    public bool redKeyStat = false;
 	//---Mouse---
 	public float mouseSpeed = 2.0f;
 
@@ -195,7 +196,13 @@ public class JillianCharacterController : MonoBehaviour
 				ammo = 10;
 			}
 		}
-	}
+
+        if (col.gameObject.tag == "RedKey")
+        {
+            redKeyStat = true;
+            col.gameObject.SetActive(false);
+        }
+    }
 
 	void OnTriggerStay (Collider col)
 	{

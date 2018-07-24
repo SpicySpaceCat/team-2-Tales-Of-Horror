@@ -8,7 +8,7 @@ public class Openscript : MonoBehaviour
 	GameObject player;
 	//public bool redKey = false;
 	//public player playerScript;
-	public bool useButton = false;
+	//public bool useButton = false;
 
     void Start()
     {

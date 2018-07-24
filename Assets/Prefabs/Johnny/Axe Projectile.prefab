@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114312898935779894}
   m_Layer: 0
   m_Name: Axe Projectile
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efefc4390f7b9e84195fe922a6c380cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 1
 --- !u!135 &135407259420261988
 SphereCollider:
   m_ObjectHideFlags: 1

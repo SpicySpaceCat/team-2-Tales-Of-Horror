@@ -3,7 +3,10 @@ guid: fffee3e0af25b9a4383b43c02fa04523
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - meleeHitbox: {fileID: 1840916151222030, guid: 606ced096ab1b864592f8a954839af63,
+      type: 2}
+  - spawnPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
