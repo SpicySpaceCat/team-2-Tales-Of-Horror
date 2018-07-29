@@ -5,37 +5,55 @@ using UnityEngine;
 public class KeyDoor : MonoBehaviour {
 
     GameObject player;
+	bool playerKeyCheck;
     public bool redKey = false;
-    public JillianCharacterController jillianPlayerScript;
-    public JohnnyCharacterController johnnyPlayerScript;
+    //public JillianCharacterController;
+    //public JohnnyCharacterController;
     public string name;
 
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        if (GameObject.Find("Jillian"))
+		player = GameObject.FindGameObjectWithTag("Player");
+		/*if (player.name == "Jillian") {
+			playerKeyCheck = player.GetComponent<JillianCharacterController> ().redKeyStat;
+		} 
+		else 
+		{
+			playerKeyCheck = player.GetComponent<JohnnyCharacterController> ().redKeyStat;
+		}*/
+
+		/*if (GameObject.Find("Jillian"))
         {
-            jillianPlayerScript = player.GetComponent<JillianCharacterController>();
+			playerScript = player.GetComponent<JillianCharacterController>();
         }
-        else if (GameObject.Find("Johnny"))
+
+        if (GameObject.Find("Johnny"))
         {
-            johnnyPlayerScript = player.GetComponent<JohnnyCharacterController>();
-        }
+			playerScript = player.GetComponent<JohnnyCharacterController>();
+        }*/
         //StartCoroutine(DoorDelayTime());
     }
 
     void Update()
     {
-        if(jillianPlayerScript.redKeyStat)
+		if (player.name == "Jillian") {
+			playerKeyCheck = player.GetComponent<JillianCharacterController> ().redKeyStat;
+		} 
+		else 
+		{
+			playerKeyCheck = player.GetComponent<JohnnyCharacterController> ().redKeyStat;
+		}
+			
+		if (playerKeyCheck == true) 
 		{
 			redKey = true;
 		}
 
-        if(johnnyPlayerScript.redKeyStat)
+        /*if(johnnyPlayerScript.redKeyStat)
         {
             redKey = true;
-        }
+        }*/
 
         /*if(Input.GetKeyUp(KeyCode.E))
 		{

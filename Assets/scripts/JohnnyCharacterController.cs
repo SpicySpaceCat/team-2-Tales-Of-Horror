@@ -209,5 +209,12 @@ public class JohnnyCharacterController : MonoBehaviour {
 				Debug.Log ("Dead");
 			}
 		}
+
+		if (col.gameObject.tag == "Dead Body" && health < 50) {
+			if (Input.GetKeyDown(KeyCode.E)) 
+			{
+				health = 50;
+			}
+		}
 	}
 }
