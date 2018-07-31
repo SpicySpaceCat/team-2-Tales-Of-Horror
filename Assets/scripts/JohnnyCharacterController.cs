@@ -214,6 +214,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.E)) 
 			{
 				health = 50;
+                col.gameObject.SetActive(false);
 			}
 		}
 	}

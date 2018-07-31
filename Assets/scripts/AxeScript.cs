@@ -18,6 +18,6 @@ public class AxeScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		Destroy (gameObject);
+		Destroy(gameObject);
 	}
 }

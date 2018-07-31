@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 54306845972068184}
   - component: {fileID: 195889504034604298}
   - component: {fileID: 114726068177867534}
+  - component: {fileID: 114504260583714378}
+  - component: {fileID: 114653277220572496}
   m_Layer: 0
   m_Name: Melee Enemy
   m_TagString: AI Melee
@@ -67,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379298095411112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72, y: 1, z: 11.15}
+  m_LocalPosition: {x: -1.8955684, y: 1, z: -8.303028}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4172868994083400}
@@ -143,6 +145,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114504260583714378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379298095411112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffee3e0af25b9a4383b43c02fa04523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeHitbox: {fileID: 1840916151222030, guid: 606ced096ab1b864592f8a954839af63,
+    type: 2}
+--- !u!114 &114653277220572496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379298095411112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da18dec8e17ba66438240c348ba0071b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1252142366523590, guid: 5ecf203e0782e644dadd57935b22a127, type: 2}
 --- !u!114 &114726068177867534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,12 +181,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3583f06112b9b47a586bcd26e09967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeRange: 3
+  projectileRange: 8
+  triggerDistance: 12
+  playerDis: 0
   health: 100
-  meleeHitbox: {fileID: 1840916151222030, guid: 606ced096ab1b864592f8a954839af63,
-    type: 2}
   spawnPoint: {fileID: 4172868994083400}
   fireRate: 3
   chase: 0
+  attackMove: {fileID: 0}
+  deadBody: {fileID: 1300010342544998, guid: 3b47faf111d3dd44e9e12fb127a7a9ea, type: 2}
 --- !u!195 &195889504034604298
 NavMeshAgent:
   m_ObjectHideFlags: 1

@@ -20,6 +20,7 @@ TagManager:
   - RedKey
   - AI Projectile
   - AI Shot
+  - Dead Body
   layers:
   - Default
   - TransparentFX

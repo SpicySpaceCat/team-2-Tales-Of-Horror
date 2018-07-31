@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1820583095936934}
+  m_RootGameObject: {fileID: 1177427250739362}
   m_IsPrefabParent: 1
---- !u!1 &1820583095936934
+--- !u!1 &1177427250739362
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4866716374544908}
-  - component: {fileID: 33559694474433850}
-  - component: {fileID: 23882487329497134}
-  - component: {fileID: 65718173339596756}
-  - component: {fileID: 54814339429455094}
-  - component: {fileID: 114382824505110402}
+  - component: {fileID: 4670830679907614}
+  - component: {fileID: 33150692372032928}
+  - component: {fileID: 23678600495176130}
+  - component: {fileID: 65106414330725814}
+  - component: {fileID: 54886277538520204}
   m_Layer: 0
-  m_Name: Red Door
-  m_TagString: Untagged
+  m_Name: dummy minor armour
+  m_TagString: Minor Armour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4866716374544908
+--- !u!4 &4670830679907614
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
+  m_GameObject: {fileID: 1177427250739362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.67, y: 1.5, z: 1.53}
-  m_LocalScale: {x: 2, y: 3, z: 0.5}
+  m_LocalPosition: {x: -11.940001, y: 0.94, z: 5.13}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23882487329497134
+--- !u!23 &23678600495176130
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
+  m_GameObject: {fileID: 1177427250739362}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 689c63519ab82e548846ae9312826742, type: 2}
+  - {fileID: 2100000, guid: bf2f22a8b184ff444b218c86cc26214f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,50 +78,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33559694474433850
+--- !u!33 &33150692372032928
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
+  m_GameObject: {fileID: 1177427250739362}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54814339429455094
+--- !u!54 &54886277538520204
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
+  m_GameObject: {fileID: 1177427250739362}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65718173339596756
+--- !u!65 &65106414330725814
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
+  m_GameObject: {fileID: 1177427250739362}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114382824505110402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820583095936934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1223530188d80b94a8341cd07f2c16e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redKey: 0
-  name: 
