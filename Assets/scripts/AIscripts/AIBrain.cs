@@ -13,9 +13,12 @@ public class AIBrain : MonoBehaviour
     Transform selfx;
     Transform selfz;
     float range;
+    public float meleeRange = 3.0f;
+    public float projectileRange = 8.0f;
+    public float triggerDistance = 12.0f;
     private NavMeshAgent agent;
     //public AImelee aimelee;
-
+    public float playerDis;
     public float health = 100;
     //public GameObject meleeHitbox;
     public Transform spawnPoint;
@@ -24,6 +27,7 @@ public class AIBrain : MonoBehaviour
     public bool chase = false;
     //public float rayLength = 100.0f;
     public GameObject attackMove;
+    public GameObject deadBody;
 
     // Use this for initialization
     void Start()
@@ -39,13 +43,13 @@ public class AIBrain : MonoBehaviour
 
         if (gameObject.CompareTag("AI Melee"))
         {
-            range = 3.0f;
+            range = meleeRange;
             attackMove = gameObject.GetComponent<AImelee>().meleeHitbox;
             fireRate = 4.0f;
         }
         else if (gameObject.CompareTag("AI Projectile"))
         {
-            range = 12.0f;
+            range = projectileRange;
             attackMove = gameObject.GetComponent<AIprojectile>().projectile;
             fireRate = 5.0f;
         }
@@ -59,7 +63,7 @@ public class AIBrain : MonoBehaviour
         float z = target.position.z;
 
         float distance = Vector3.Distance(gameObject.transform.position, target.position);
-
+        playerDis = distance;
         agent.SetDestination(new Vector3(x, y, z));
 
         /*RaycastHit hit;
@@ -80,6 +84,16 @@ public class AIBrain : MonoBehaviour
             agent.enabled = !agent.enabled;
         }*/
 
+        if (distance < triggerDistance)
+        {
+            chase = true;
+        }
+
+        if (chase)
+        {
+            agent.speed = 3.5f;
+        }
+
         if (distance < range)
         {
             agent.speed = 0.0f;
@@ -92,10 +106,17 @@ public class AIBrain : MonoBehaviour
                 timeToShoot = Time.time + fireRate;
             }
         }
-        else
-        {
-            agent.speed = 3.5f;
-        }
+
+    }
+
+    void DeadMeat()
+    {
+        float x = transform.position.x;
+        float y = 0.25f;
+        float z = transform.position.z;
+        Vector3 bodyPosition = new Vector3(x, y, z);
+
+        Instantiate(deadBody, bodyPosition, transform.rotation);
     }
 
     void OnTriggerStay(Collider col)
@@ -107,6 +128,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }
@@ -117,6 +139,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }
@@ -128,6 +151,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }
@@ -138,6 +162,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }
@@ -148,6 +173,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }
@@ -158,6 +184,7 @@ public class AIBrain : MonoBehaviour
             if (health <= 0)
             {
                 Debug.Log("Dead");
+                DeadMeat();
                 Destroy(gameObject);
             }
         }

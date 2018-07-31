@@ -3,7 +3,10 @@ guid: 4c3583f06112b9b47a586bcd26e09967
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawnPoint: {instanceID: 0}
+  - attackMove: {instanceID: 0}
+  - deadBody: {fileID: 1300010342544998, guid: 3b47faf111d3dd44e9e12fb127a7a9ea, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
