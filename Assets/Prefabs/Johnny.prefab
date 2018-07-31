@@ -473,7 +473,7 @@ MonoBehaviour:
     type: 2}
   attackSwordSlash: {fileID: 1919730547825468, guid: 0849915ae58e8994483fc16603ab737f,
     type: 2}
-  throwingAxeProjectile: {fileID: 1223416856111752, guid: f55fc246bcbb66a47b39f858468b0edc,
+  throwingAxeProjectile: {fileID: 1773177048176858, guid: 8a502ff2261446f4ca2dc78927fcb78b,
     type: 2}
 --- !u!124 &124283323255162892
 Behaviour:
