@@ -16,6 +16,8 @@ public class JillianCharacterController : MonoBehaviour
 	private float moreMana;
 	public float manaRate = 10;
     public bool redKeyStat = false;
+	public bool blueKeyStat = false;
+	public bool bossKeyStat = false;
 	//---Mouse---
 	public float mouseSpeed = 2.0f;
 
@@ -130,6 +132,10 @@ public class JillianCharacterController : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && Time.time > timeToImp){
 			Debug.Log("fire");
+			if (GameObject.Find ("Imp(Clone)")) 
+			{
+				Destroy (GameObject.Find ("Imp(Clone)"));
+			}
 			Instantiate (impObject, weaponSpawner.position, weaponSpawner.rotation);
 			timeToImp = Time.time + fireRateImp;
 		}
@@ -202,6 +208,18 @@ public class JillianCharacterController : MonoBehaviour
             redKeyStat = true;
             col.gameObject.SetActive(false);
         }
+
+		if (col.gameObject.tag == "BlueKey")
+		{
+			blueKeyStat = true;
+			col.gameObject.SetActive(false);
+		}
+
+		if (col.gameObject.tag == "BossKey")
+		{
+			bossKeyStat = true;
+			col.gameObject.SetActive(false);
+		}
     }
 
 	void OnTriggerStay (Collider col)

@@ -13,6 +13,8 @@ public class JohnnyCharacterController : MonoBehaviour {
 	public float ammo = 10;
 	public bool armourStat;
     public bool redKeyStat = false;
+	public bool blueKeyStat = false;
+	public bool bossKeyStat = false;
     //---Mouse---
     public float mouseSpeed = 2.0f;
 
@@ -192,6 +194,18 @@ public class JohnnyCharacterController : MonoBehaviour {
             redKeyStat = true;
             col.gameObject.SetActive(false);
         }
+
+		if (col.gameObject.tag == "BlueKey")
+		{
+			blueKeyStat = true;
+			col.gameObject.SetActive(false);
+		}
+
+		if (col.gameObject.tag == "BossKey")
+		{
+			bossKeyStat = true;
+			col.gameObject.SetActive(false);
+		}
     }
 
 	void OnTriggerStay (Collider col)

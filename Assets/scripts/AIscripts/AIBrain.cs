@@ -188,5 +188,16 @@ public class AIBrain : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+		if (col.gameObject.tag == "Imp Attack")
+		{
+			health -= 10;
+			if (health <= 0)
+			{
+				Debug.Log("Dead");
+				DeadMeat();
+				Destroy(gameObject);
+			}
+		}
     }
 }

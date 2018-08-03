@@ -21,6 +21,10 @@ TagManager:
   - AI Projectile
   - AI Shot
   - Dead Body
+  - BlueKey
+  - BossKey
+  - Imp Attack
+  - Imp
   layers:
   - Default
   - TransparentFX
