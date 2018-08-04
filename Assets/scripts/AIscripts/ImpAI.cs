@@ -55,7 +55,7 @@ public class ImpAI : MonoBehaviour {
 			}
 
 			if (chase) {
-				agent.speed = 20.0f;
+				agent.speed = 10.0f;
 			}
 
 			if (distance < meleeRange) {
@@ -68,6 +68,12 @@ public class ImpAI : MonoBehaviour {
 					timeToShoot = Time.time + fireRate;
 				}
 			}
+		}
+
+		if (enemy.Length == null) 
+		{
+			transform.LookAt (player.transform);
+			agent.SetDestination (new Vector3 (x, y, z));
 		}
 	}
 

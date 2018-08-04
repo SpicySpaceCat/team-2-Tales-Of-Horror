@@ -28,6 +28,10 @@ TagManager:
   - AI HitScan
   - AIhitscanbox
   - ImpAttack
+  - Melee Knight
+  - Golden Knight
+  - Helsing
+  - Arthur
   layers:
   - Default
   - TransparentFX

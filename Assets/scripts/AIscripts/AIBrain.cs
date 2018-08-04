@@ -19,7 +19,7 @@ public class AIBrain : MonoBehaviour
     private NavMeshAgent agent;
     //public AImelee aimelee;
     public float playerDis;
-    public float health = 100;
+    public float health = 300.0f;
     //public GameObject meleeHitbox;
     public Transform spawnPoint;
     float timeToShoot;
@@ -126,7 +126,7 @@ public class AIBrain : MonoBehaviour
         //Jillian Attacks
         if (col.gameObject.tag == "Vial")
         {
-            health -= 20;
+            health -= 10;
             if (health <= 0)
             {
                 Debug.Log("Dead");
@@ -149,7 +149,7 @@ public class AIBrain : MonoBehaviour
         //Johnny Attacks
         if (col.gameObject.tag == "Fists")
         {
-            health -= 10;
+            health -= 20;
             if (health <= 0)
             {
                 Debug.Log("Dead");

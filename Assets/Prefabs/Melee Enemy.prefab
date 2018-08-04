@@ -227,7 +227,7 @@ MonoBehaviour:
   projectileRange: 8
   triggerDistance: 12
   playerDis: 0
-  health: 100
+  health: 60
   spawnPoint: {fileID: 4172868994083400}
   fireRate: 3
   chase: 0

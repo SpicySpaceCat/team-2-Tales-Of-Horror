@@ -224,20 +224,37 @@ public class JillianCharacterController : MonoBehaviour
 
 	void OnTriggerStay (Collider col)
 	{
+		//men at arms
 		if (col.gameObject.tag == "Enemy" && armourStat == true) {
-			armour -= 10;
+			armour -= 5;
 			if (armour <= 0) {
 				armourStat = false;
 			}
 		}
 
 		if (col.gameObject.tag == "Enemy" && armourStat == false) {
+			health -= 5;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
+
+		//Projectile enemy
+		if (col.gameObject.tag == "AI Shot" && armourStat == true) {
+			armour -= 10;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "AI Shot" && armourStat == false) {
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
 			}
 		}
 
+		//HitScan enemy
 		if (col.gameObject.tag == "AIhitscanbox" && armourStat == true) {
 			armour -= 5;
 			if (armour <= 0) {
@@ -251,7 +268,66 @@ public class JillianCharacterController : MonoBehaviour
 				Debug.Log ("Dead");
 			}
 		}
-	
+
+		//knight enemy
+		if (col.gameObject.tag == "Melee Knight" && armourStat == true) {
+			armour -= 10;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "Melee Knight" && armourStat == false) {
+			health -= 10;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
+
+		//Boss 1 Golden Knight
+		if (col.gameObject.tag == "Golden Knight" && armourStat == true) {
+			armour -= 15;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "Golden Knight" && armourStat == false) {
+			health -= 15;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
+
+		//Boss 2 Arthur
+		if (col.gameObject.tag == "Arthur" && armourStat == true) {
+			armour -= 20;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "Arthur" && armourStat == false) {
+			health -= 20;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
+
+		//Boss 3 Van Helsing
+		if (col.gameObject.tag == "Helsing" && armourStat == true) {
+			armour -= 10;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "Helsing" && armourStat == false) {
+			health -= 10;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
 	}
 }
 
