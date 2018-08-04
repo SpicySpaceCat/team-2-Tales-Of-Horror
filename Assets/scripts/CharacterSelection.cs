@@ -7,11 +7,12 @@ public class CharacterSelection : MonoBehaviour {
 	public GameObject johnny;
 	public GameObject jillianUI;
 	public GameObject johnnyUI;
+	public GameObject enemies; //Add all enemies present within the stage into an Empty Game Object
 	public GameObject buttons;
 
 	void Awake()
 	{
-		//Time.timeScale = 0;
+		enemies.SetActive (false);
 	}
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class CharacterSelection : MonoBehaviour {
 	{
 		johnny.SetActive (true);
 		johnnyUI.SetActive (true);
+		enemies.SetActive (true);
 		buttons.SetActive (false);
 	}
 
@@ -33,6 +35,7 @@ public class CharacterSelection : MonoBehaviour {
 	{
 		jillian.SetActive (true);
 		jillianUI.SetActive (true);
+		enemies.SetActive (true);
 		buttons.SetActive (false);
 	}
 }
