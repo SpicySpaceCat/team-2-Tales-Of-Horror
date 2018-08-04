@@ -27,9 +27,25 @@ GameObject:
   - component: {fileID: 114379050678951404}
   - component: {fileID: 114386370402080926}
   - component: {fileID: 114043227238878856}
+  - component: {fileID: 114995738705474762}
   m_Layer: 0
   m_Name: Projectile Enemy
   m_TagString: AI Projectile
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1644062155524388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4726985310712980}
+  m_Layer: 0
+  m_Name: EGO Imp Attack Point
+  m_TagString: ImpAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,6 +78,19 @@ Transform:
   m_Father: {fileID: 4959831593350718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4726985310712980
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644062155524388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4959831593350718}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4959831593350718
 Transform:
   m_ObjectHideFlags: 1
@@ -69,10 +98,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1249278046413228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72, y: 1, z: 11.15}
+  m_LocalPosition: {x: -11.74, y: 1, z: 11.15}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4245594584294716}
+  - {fileID: 4726985310712980}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -191,6 +221,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeHitbox: {fileID: 1840916151222030, guid: 606ced096ab1b864592f8a954839af63,
     type: 2}
+--- !u!114 &114995738705474762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249278046413228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c970169f6348a4fa3e51c4e05cc25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitScan: {fileID: 1376580828501012, guid: a6b9a51b80f11d04aa46c16612bf3ee7, type: 2}
 --- !u!195 &195241414112047758
 NavMeshAgent:
   m_ObjectHideFlags: 1

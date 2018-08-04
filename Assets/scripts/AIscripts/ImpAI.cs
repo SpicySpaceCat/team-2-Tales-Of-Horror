@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class ImpAI : MonoBehaviour {
 	Transform target;
-	Transform enemy;
+	GameObject[] enemy;
+	GameObject player;
 	Transform x;
 	Transform y;
 	Transform z;
@@ -24,49 +25,48 @@ public class ImpAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		enemy = GameObject.FindWithTag("AI Melee").transform;
+		enemy = GameObject.FindGameObjectsWithTag("ImpAttack");
+		player = GameObject.FindWithTag("Player");
 		mainPoint = GameObject.Find("Imp Stay Point").transform;
 		agent = gameObject.GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		enemy = GameObject.FindWithTag("AI Melee").transform;
-
+		enemy = GameObject.FindGameObjectsWithTag("ImpAttack");
 		float x = mainPoint.position.x;
 		float y = 1.0f;
 		float z = mainPoint.position.z;
 
-		float distance = Vector3.Distance(gameObject.transform.position, enemy.position);
-		enemyDis = distance;
+		for (int i = 0; i < enemy.Length; i++) {
+			float distance = Vector3.Distance (gameObject.transform.position, enemy [i].transform.position);
+			enemyDis = distance;
 
-		if (distance < triggerDistance) {
-			chase = true;
-			float xe = enemy.position.x;
-			float ye = 1.0f;
-			float ze = enemy.position.z;
-			agent.SetDestination (new Vector3 (xe, ye, ze));
-		} 
-		else 
-		{
-			agent.SetDestination(new Vector3(x, y, z));
-		}
+			if (distance < triggerDistance) {
+				transform.LookAt (enemy[i].transform);
+				chase = true;
+				float xe = enemy [i].transform.position.x;
+				float ye = 1.0f;
+				float ze = enemy [i].transform.position.z;
+				agent.SetDestination (new Vector3 (xe, ye, ze));
+			} else {
+				transform.LookAt (player.transform);
+				agent.SetDestination (new Vector3 (x, y, z));
+			}
 
-		if (chase)
-		{
-			agent.speed = 10.0f;
-		}
+			if (chase) {
+				agent.speed = 20.0f;
+			}
 
-		if (distance < meleeRange)
-		{
-			agent.speed = 0.0f;
-
+			if (distance < meleeRange) {
+				agent.speed = 0.0f;
 
 
-			if (Time.time > timeToShoot)
-			{
-				Instantiate(attackMove, spawnPoint.position, spawnPoint.rotation);
-				timeToShoot = Time.time + fireRate;
+
+				if (Time.time > timeToShoot) {
+					Instantiate (attackMove, spawnPoint.position, spawnPoint.rotation);
+					timeToShoot = Time.time + fireRate;
+				}
 			}
 		}
 	}

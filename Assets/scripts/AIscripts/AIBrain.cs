@@ -53,10 +53,12 @@ public class AIBrain : MonoBehaviour
             attackMove = gameObject.GetComponent<AIprojectile>().projectile;
             fireRate = 5.0f;
         }
-        /*if (gameObject.CompareTag("AI HitScan"))
+        if (gameObject.CompareTag("AI HitScan"))
         {
             range = 12.0f;
-        }*/
+			attackMove = gameObject.GetComponent<AIhitscan>().hitScan;
+			fireRate = 5.0f;
+        }
 
         float x = target.position.x;
         float y = 1.0f;

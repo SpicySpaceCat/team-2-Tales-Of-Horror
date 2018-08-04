@@ -225,13 +225,27 @@ public class JillianCharacterController : MonoBehaviour
 	void OnTriggerStay (Collider col)
 	{
 		if (col.gameObject.tag == "Enemy" && armourStat == true) {
-			armour -= 5;
+			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
 			}
 		}
 
 		if (col.gameObject.tag == "Enemy" && armourStat == false) {
+			health -= 10;
+			if (health <= 0) {
+				Debug.Log ("Dead");
+			}
+		}
+
+		if (col.gameObject.tag == "AIhitscanbox" && armourStat == true) {
+			armour -= 5;
+			if (armour <= 0) {
+				armourStat = false;
+			}
+		}
+
+		if (col.gameObject.tag == "AIhitscanbox" && armourStat == false) {
 			health -= 5;
 			if (health <= 0) {
 				Debug.Log ("Dead");

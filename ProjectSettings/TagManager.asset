@@ -25,6 +25,9 @@ TagManager:
   - BossKey
   - Imp Attack
   - Imp
+  - AI HitScan
+  - AIhitscanbox
+  - ImpAttack
   layers:
   - Default
   - TransparentFX
