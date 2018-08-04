@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JohnnyCharacterController : MonoBehaviour {
 	//---Movement---
@@ -8,6 +9,12 @@ public class JohnnyCharacterController : MonoBehaviour {
 	public float walkSpeed = 6.0f;
 	public float sprintSpeed = 10.0f;
 	//---health and armour
+	public Text healthText;
+	public Text armourText;
+	public Text ammoText;
+	public Image redImage;
+	public Image blueImage;
+	public Image bossImage;
 	public float health = 100;
 	public float armour = 0;
 	public float ammo = 10;
@@ -52,10 +59,17 @@ public class JohnnyCharacterController : MonoBehaviour {
 		broadsword.SetActive (false);
 		throwingAxe.SetActive (false);
 		fireRate = fireRateFists;
+		redImage.enabled = false;
+		blueImage.enabled = false;
+		bossImage.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		healthText.text = health.ToString();
+		armourText.text = armour.ToString();
+		ammoText.text = ammo.ToString();
+
 		//Player Movement (WASD)
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * currentSpeed;
 		var z = Input.GetAxis("Vertical") * Time.deltaTime * currentSpeed;
@@ -189,21 +203,24 @@ public class JohnnyCharacterController : MonoBehaviour {
 			}
 		}
 
-        if (col.gameObject.tag == "RedKey")
-        {
-            redKeyStat = true;
-            col.gameObject.SetActive(false);
-        }
+		if (col.gameObject.tag == "RedKey")
+		{
+			redKeyStat = true;
+			redImage.enabled = true;
+			col.gameObject.SetActive(false);
+		}
 
 		if (col.gameObject.tag == "BlueKey")
 		{
 			blueKeyStat = true;
+			blueImage.enabled = true;
 			col.gameObject.SetActive(false);
 		}
 
 		if (col.gameObject.tag == "BossKey")
 		{
 			bossKeyStat = true;
+			bossImage.enabled = true;
 			col.gameObject.SetActive(false);
 		}
     }
@@ -215,6 +232,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 5;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -230,6 +248,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -245,6 +264,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 5;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -260,6 +280,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -275,6 +296,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 15;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -290,6 +312,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 20;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -305,6 +328,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 

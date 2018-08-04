@@ -33,6 +33,7 @@ public class ImpAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		player = GameObject.FindWithTag("Player");
 		enemy = GameObject.FindGameObjectsWithTag("ImpAttack");
 		float x = mainPoint.position.x;
 		float y = 1.0f;

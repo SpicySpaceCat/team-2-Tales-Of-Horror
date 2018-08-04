@@ -452,6 +452,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 6
   sprintSpeed: 10
+  healthText: {fileID: 0}
+  armourText: {fileID: 0}
+  ammoText: {fileID: 0}
+  redImage: {fileID: 0}
+  blueImage: {fileID: 0}
+  bossImage: {fileID: 0}
   health: 100
   armour: 0
   ammo: 10

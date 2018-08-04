@@ -20,6 +20,7 @@ public class Openscript : MonoBehaviour
 
 	void Update()
 	{
+		player = GameObject.FindWithTag("Player");
 		/*if(playerScript.redKeyStat)
 		{
 			redKey = true;

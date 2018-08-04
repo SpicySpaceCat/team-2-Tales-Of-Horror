@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JillianCharacterController : MonoBehaviour 
 {
@@ -8,6 +9,13 @@ public class JillianCharacterController : MonoBehaviour
 	public float walkSpeed = 6.0f;
 	public float sprintSpeed = 10.0f;
 	//---health and armour
+	public Text healthText;
+	public Text armourText;
+	public Text ammoText;
+	public Text manaText;
+	public Image redImage;
+	public Image blueImage;
+	public Image bossImage;
 	public float health = 100;
 	public float armour = 0;
 	public float ammo = 10;
@@ -18,6 +26,7 @@ public class JillianCharacterController : MonoBehaviour
     public bool redKeyStat = false;
 	public bool blueKeyStat = false;
 	public bool bossKeyStat = false;
+
 	//---Mouse---
 	public float mouseSpeed = 2.0f;
 
@@ -56,11 +65,18 @@ public class JillianCharacterController : MonoBehaviour
 		fireball.SetActive (false);
 		imp.SetActive (false);
 		fireRate = fireRateVialLong;
+		redImage.enabled = false;
+		blueImage.enabled = false;
+		bossImage.enabled = false;
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
+		healthText.text = health.ToString();
+		armourText.text = armour.ToString();
+		ammoText.text = ammo.ToString();
+		manaText.text = mana.ToString();
 		//Player Movement (WASD)
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * currentSpeed;
 		var z = Input.GetAxis("Vertical") * Time.deltaTime * currentSpeed;
@@ -130,14 +146,14 @@ public class JillianCharacterController : MonoBehaviour
 			timeToShoot = Time.time + fireRateFireball;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && Time.time > timeToImp){
+		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && mana == 100){
 			Debug.Log("fire");
 			if (GameObject.Find ("Imp(Clone)")) 
 			{
 				Destroy (GameObject.Find ("Imp(Clone)"));
 			}
 			Instantiate (impObject, weaponSpawner.position, weaponSpawner.rotation);
-			timeToImp = Time.time + fireRateImp;
+			//timeToImp = Time.time + fireRateImp;
 		}
 
 		if (armour > 0) {
@@ -206,18 +222,21 @@ public class JillianCharacterController : MonoBehaviour
         if (col.gameObject.tag == "RedKey")
         {
             redKeyStat = true;
+			redImage.enabled = true;
             col.gameObject.SetActive(false);
         }
 
 		if (col.gameObject.tag == "BlueKey")
 		{
 			blueKeyStat = true;
+			blueImage.enabled = true;
 			col.gameObject.SetActive(false);
 		}
 
 		if (col.gameObject.tag == "BossKey")
 		{
 			bossKeyStat = true;
+			bossImage.enabled = true;
 			col.gameObject.SetActive(false);
 		}
     }
@@ -229,6 +248,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 5;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -244,6 +264,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -259,6 +280,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 5;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -274,6 +296,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -289,6 +312,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 15;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -304,6 +328,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 20;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 
@@ -319,6 +344,7 @@ public class JillianCharacterController : MonoBehaviour
 			armour -= 10;
 			if (armour <= 0) {
 				armourStat = false;
+				armour = 0;
 			}
 		}
 

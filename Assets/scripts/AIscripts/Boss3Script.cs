@@ -41,6 +41,7 @@ public class Boss3Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		target = GameObject.FindWithTag("Player").transform;
 		transform.LookAt(target);
 
 		attackProjectile = gameObject.GetComponent<Boss3Attack>().attackprojectile;

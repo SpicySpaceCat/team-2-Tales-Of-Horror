@@ -38,6 +38,7 @@ public class Boss1Script : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		target = GameObject.FindWithTag("Player").transform;
 		transform.LookAt(target);
 
 		if (gameObject.CompareTag("AI Melee"))

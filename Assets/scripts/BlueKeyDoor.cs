@@ -36,6 +36,7 @@ public class BlueKeyDoor : MonoBehaviour {
 
 	void Update()
 	{
+		player = GameObject.FindWithTag("Player");
 		if (player.name == "Jillian") {
 			playerKeyCheck = player.GetComponent<JillianCharacterController> ().blueKeyStat;
 		} 
