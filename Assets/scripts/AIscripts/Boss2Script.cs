@@ -96,6 +96,10 @@ public class Boss2Script : MonoBehaviour {
 			}
 		}
 
+		if (health < 200) 
+		{
+			GetComponent<Renderer>().material.color = new Color(0, 255, 0);
+		}
 	}
 
 	void DeadMeat()
