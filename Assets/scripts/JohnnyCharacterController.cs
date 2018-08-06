@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JohnnyCharacterController : MonoBehaviour {
 	//---Movement---
@@ -225,6 +226,12 @@ public class JohnnyCharacterController : MonoBehaviour {
 		}
     }
 
+	void Restart ()
+	{
+		Scene loadedLevel = SceneManager.GetActiveScene ();
+		SceneManager.LoadScene (loadedLevel.buildIndex);
+	}
+
 	void OnTriggerStay (Collider col)
 	{
 		//men at arms
@@ -240,6 +247,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 5;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -256,6 +264,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -272,6 +281,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 5;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -288,6 +298,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -304,6 +315,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 15;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -320,6 +332,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 20;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -336,6 +349,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 

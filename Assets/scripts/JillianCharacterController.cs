@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JillianCharacterController : MonoBehaviour 
 {
@@ -22,7 +23,7 @@ public class JillianCharacterController : MonoBehaviour
 	public bool armourStat;
 	public float mana = 0;
 	private float moreMana;
-	public float manaRate = 10;
+	public float manaRate = 5;
     public bool redKeyStat = false;
 	public bool blueKeyStat = false;
 	public bool bossKeyStat = false;
@@ -153,6 +154,7 @@ public class JillianCharacterController : MonoBehaviour
 				Destroy (GameObject.Find ("Imp(Clone)"));
 			}
 			Instantiate (impObject, weaponSpawner.position, weaponSpawner.rotation);
+			mana = 0;
 			//timeToImp = Time.time + fireRateImp;
 		}
 
@@ -170,11 +172,14 @@ public class JillianCharacterController : MonoBehaviour
 			if (mana > 100) {
 				mana = 100;
 				Debug.Log("Special is ready!");
-				if (Input.GetKeyDown (KeyCode.Space)) {
-					mana = 0;
-				}
 			}
 		}
+	}
+
+	void Restart ()
+	{
+		Scene loadedLevel = SceneManager.GetActiveScene ();
+		SceneManager.LoadScene (loadedLevel.buildIndex);
 	}
 
 	void OnTriggerEnter(Collider col) 
@@ -256,6 +261,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 5;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -272,6 +278,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -288,6 +295,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 5;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -304,6 +312,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -320,6 +329,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 15;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -336,6 +346,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 20;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 
@@ -352,6 +363,7 @@ public class JillianCharacterController : MonoBehaviour
 			health -= 10;
 			if (health <= 0) {
 				Debug.Log ("Dead");
+				Restart();
 			}
 		}
 	}

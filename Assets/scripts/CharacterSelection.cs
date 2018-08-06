@@ -12,6 +12,8 @@ public class CharacterSelection : MonoBehaviour {
 
 	void Awake()
 	{
+		Cursor.visible = true;
+		Screen.lockCursor = false;
 		enemies.SetActive (false);
 	}
 	// Use this for initialization
