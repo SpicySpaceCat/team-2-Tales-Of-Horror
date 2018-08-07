@@ -10,7 +10,7 @@ public class ImpAI : MonoBehaviour {
 	Transform x;
 	Transform y;
 	Transform z;
-	public float enemyDis;
+	public float[] enemyDis;
 	private NavMeshAgent agent;
 	public Transform mainPoint;
 	public float health = 30;
@@ -34,14 +34,17 @@ public class ImpAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		player = GameObject.FindWithTag("Player");
-		enemy = GameObject.FindGameObjectsWithTag("ImpAttack");
+		//enemy = GameObject.FindGameObjectsWithTag("ImpAttack");
 		float x = mainPoint.position.x;
 		float y = 1.0f;
 		float z = mainPoint.position.z;
 
-		for (int i = 0; i < enemy.Length; i++) {
-			float distance = Vector3.Distance (gameObject.transform.position, enemy [i].transform.position);
-			enemyDis = distance;
+        transform.LookAt(player.transform);
+        agent.SetDestination(new Vector3(x, y, z));
+
+        for (int i = 0; i < enemy.Length; i++) {
+			float distance = Vector3.Distance (gameObject.transform.position, enemy[i].transform.position);
+			enemyDis[i] = distance;
 
 			if (distance < triggerDistance) {
 				transform.LookAt (enemy[i].transform);
@@ -50,7 +53,10 @@ public class ImpAI : MonoBehaviour {
 				float ye = 1.0f;
 				float ze = enemy [i].transform.position.z;
 				agent.SetDestination (new Vector3 (xe, ye, ze));
-			} else {
+			}
+
+            if (distance > triggerDistance)
+            {
 				transform.LookAt (player.transform);
 				agent.SetDestination (new Vector3 (x, y, z));
 			}
@@ -69,12 +75,6 @@ public class ImpAI : MonoBehaviour {
 					timeToShoot = Time.time + fireRate;
 				}
 			}
-		}
-
-		if (enemy.Length == null) 
-		{
-			transform.LookAt (player.transform);
-			agent.SetDestination (new Vector3 (x, y, z));
 		}
 	}
 
