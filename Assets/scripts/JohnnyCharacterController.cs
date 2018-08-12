@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class JohnnyCharacterController : MonoBehaviour {
+	//---Audio---
+	public GameObject switchSFX;
+	public GameObject throwSFX;
 	//---Movement---
 	private float currentSpeed = 6.0f;
 	public float walkSpeed = 6.0f;
@@ -94,6 +97,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		//Weapon Switching
 		if (Input.GetKeyDown(KeyCode.Alpha1)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 1; //First weapon "fists"
 			currentAttack = fistsHitbox;
 			fists.SetActive (true);
@@ -103,6 +107,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha2)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 2; //Second weapon "Broadsword"
 			currentAttack = broadswordHitbox;
 			fists.SetActive (false);
@@ -112,6 +117,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha3)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 3; //Third weapon "Throwing Axe"
 			currentAttack = throwingAxeProjectile;
 			fists.SetActive (false);
@@ -134,7 +140,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		}
 
 		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && ammo > 0 && Time.time > timeToSlash){
-
+			Instantiate (throwSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (throwingAxeProjectile, weaponSpawner.position, weaponSpawner.rotation);
 			timeToSlash = Time.time + fireRateAxe;
 			ammo -= 1;

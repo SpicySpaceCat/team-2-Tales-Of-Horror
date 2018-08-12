@@ -792,6 +792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd1d61cae86e4f46bfccc40e337bed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchSFX: {fileID: 1050558518354588, guid: 5b9178f11c6e47546bf853a6117556fe, type: 2}
+  throwSFX: {fileID: 1473756573205390, guid: 14598e38884830144b557c851929687c, type: 2}
   walkSpeed: 6
   sprintSpeed: 10
   healthText: {fileID: 114169671519931946}

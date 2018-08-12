@@ -1177,6 +1177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce75914af69de7e419ad15ece6f51a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchSFX: {fileID: 1050558518354588, guid: 5b9178f11c6e47546bf853a6117556fe, type: 2}
+  throwSFX: {fileID: 1473756573205390, guid: 14598e38884830144b557c851929687c, type: 2}
   walkSpeed: 6
   sprintSpeed: 10
   healthText: {fileID: 114802823950167466}

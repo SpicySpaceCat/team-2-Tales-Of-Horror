@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class JillianCharacterController : MonoBehaviour 
 {
+	//---Audio---
+	public GameObject switchSFX;
+	public GameObject throwSFX;
 	//---Movement---
 	private float currentSpeed = 6.0f;
 	public float walkSpeed = 6.0f;
@@ -101,6 +104,7 @@ public class JillianCharacterController : MonoBehaviour
 
 		//Weapon Switching
 		if (Input.GetKeyDown(KeyCode.Alpha1)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 1; //Second weapon "Vials"
 			currentAttack = vialLongProjectile;
 			vials.SetActive (true);
@@ -110,6 +114,7 @@ public class JillianCharacterController : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha2)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 2; //First weapon "FireBall"
 			currentAttack = fireballProjectile;
 			vials.SetActive (false);
@@ -119,6 +124,7 @@ public class JillianCharacterController : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown(KeyCode.Alpha3)){
+			Instantiate (switchSFX, weaponSpawner.position, weaponSpawner.rotation);
 			currentWeapon = 3; //Third weapon "Imp"
 			currentAttack = impObject;
 			vials.SetActive (false);
@@ -130,18 +136,21 @@ public class JillianCharacterController : MonoBehaviour
 		//Fire/Attack
 		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 1 && Time.time > timeToShoot){
 			Debug.Log("fire");
+			Instantiate (throwSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (vialLongProjectile, weaponSpawner.position, weaponSpawner.rotation);
 			timeToShoot = Time.time + fireRateVialLong;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Mouse1) && currentWeapon == 1 && Time.time > timeToShoot){
 			Debug.Log("fire");
+			Instantiate (throwSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (vialShortProjectile, weaponSpawner.position, weaponSpawner.rotation);
 			timeToShoot = Time.time + fireRateVialShort;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 2 && ammo > 0 && Time.time > timeToShoot){
 			Debug.Log("fire");
+			Instantiate (throwSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (fireballProjectile, weaponSpawner.position, weaponSpawner.rotation);
 			ammo -= 1;
 			timeToShoot = Time.time + fireRateFireball;
