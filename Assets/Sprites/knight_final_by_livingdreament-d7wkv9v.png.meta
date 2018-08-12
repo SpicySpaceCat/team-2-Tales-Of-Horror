@@ -1,0 +1,788 @@
+fileFormatVersion: 2
+guid: fa7d842891d20a54aba0410cb1cd4188
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: knight_final_by_livingdreament-d7wkv9v_0
+    21300002: knight_final_by_livingdreament-d7wkv9v_1
+    21300004: knight_final_by_livingdreament-d7wkv9v_2
+    21300006: knight_final_by_livingdreament-d7wkv9v_3
+    21300008: knight_final_by_livingdreament-d7wkv9v_4
+    21300010: knight_final_by_livingdreament-d7wkv9v_5
+    21300012: knight_final_by_livingdreament-d7wkv9v_6
+    21300014: knight_final_by_livingdreament-d7wkv9v_7
+    21300016: knight_final_by_livingdreament-d7wkv9v_8
+    21300018: knight_final_by_livingdreament-d7wkv9v_9
+    21300020: knight_final_by_livingdreament-d7wkv9v_10
+    21300022: knight_final_by_livingdreament-d7wkv9v_11
+    21300024: knight_final_by_livingdreament-d7wkv9v_12
+    21300026: knight_final_by_livingdreament-d7wkv9v_13
+    21300028: knight_final_by_livingdreament-d7wkv9v_14
+    21300030: knight_final_by_livingdreament-d7wkv9v_15
+    21300032: knight_final_by_livingdreament-d7wkv9v_16
+    21300034: knight_final_by_livingdreament-d7wkv9v_17
+    21300036: knight_final_by_livingdreament-d7wkv9v_18
+    21300038: knight_final_by_livingdreament-d7wkv9v_19
+    21300040: knight_final_by_livingdreament-d7wkv9v_20
+    21300042: knight_final_by_livingdreament-d7wkv9v_21
+    21300044: knight_final_by_livingdreament-d7wkv9v_22
+    21300046: knight_final_by_livingdreament-d7wkv9v_23
+    21300048: knight_final_by_livingdreament-d7wkv9v_24
+    21300050: knight_final_by_livingdreament-d7wkv9v_25
+    21300052: knight_final_by_livingdreament-d7wkv9v_26
+    21300054: knight_final_by_livingdreament-d7wkv9v_27
+    21300056: knight_final_by_livingdreament-d7wkv9v_28
+    21300058: knight_final_by_livingdreament-d7wkv9v_29
+    21300060: knight_final_by_livingdreament-d7wkv9v_30
+    21300062: knight_final_by_livingdreament-d7wkv9v_31
+    21300064: knight_final_by_livingdreament-d7wkv9v_32
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 505
+        width: 39
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8f5dc480a432a47a1d4d44f7e7adb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 504
+        width: 46
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19093a7f42798a449b4cbcbda8c5c8b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 504
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9350f86379c2e49b613a14fb0ee7ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_3
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 504
+        width: 49
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac78be9e8f6988746851b5ef9975978d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 395
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969cb375ada2dd947b96ea13d1294083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 402
+        width: 70
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b3e79ed56fcb449a2617ff67414778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 407
+        width: 71
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38899d2ea7b50f9499a0d93164737d68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_7
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 395
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d002999779f8c444fb2e8fbc46260bbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 402
+        width: 70
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af06d04a9480a8442aab7cb8bb17e62a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_9
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 407
+        width: 71
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038321a37940844449ebab44fd8ee662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 286
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e48156d701cf845855a36f1a707fc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 275
+        width: 53
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2887edc459b46984ea8bf61d2ff88a6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_12
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 287
+        width: 46
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3733326bcfd221418b491a5dbdba94b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_13
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 285
+        width: 43
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a047902c1d3aaa1448f599251220cda3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_14
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 371
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc170c5f64438c48ae5cff54bfbafb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 180
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f1129a2b75dd448c32050f9cda7a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_16
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 179
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ff4c8e8ba200e4ba9d8c7ac65978d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_17
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 175
+        width: 47
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cdfe07cfe0ada4c92a70d38087beca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_18
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 201
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ad1e914ef164643bf0db2c86b4e265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_19
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 174
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ed7f95986c7134eb041a73edb42190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_20
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 200
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251b844d14baae646b8597653260af12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_21
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 173
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a361e13c4d9b8e14b9687e62986e5985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_22
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 176
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37174658b5258ed41b39128b0513d467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_23
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 175
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb65bfeed47cd94e86ead12b3345261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 69
+        width: 47
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ef2354f559ce94cac307cf8ec1995e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_25
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 77
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a584c59ca131e3843b857762d4925bc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_26
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 83
+        width: 58
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8043b3086d11dd340a6a91e45d435401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_27
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 91
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765434600ac96a949a6b3b7e30f9bb41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_28
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 140
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf83d14ab00ad64fa4788c4b8068fad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_29
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 91
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09d88733bf19fb418071d55679c1055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_30
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 67
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27842150ba181a541b94c009965aa74a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_31
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 64
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29799f32f47ea0e4988ae6a8842ad422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_final_by_livingdreament-d7wkv9v_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 61
+        width: 55
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0472718259efa748a5674b67646d235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: dcc96902f600b0745ab89a524d414dfb
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

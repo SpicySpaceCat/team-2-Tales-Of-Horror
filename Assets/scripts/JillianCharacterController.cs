@@ -103,8 +103,8 @@ public class JillianCharacterController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Alpha1)){
 			currentWeapon = 1; //Second weapon "Vials"
 			currentAttack = vialLongProjectile;
-			vials.SetActive (false);
-			fireball.SetActive (true);
+			vials.SetActive (true);
+			fireball.SetActive (false);
 			imp.SetActive (false);
 			fireRate = fireRateVialLong;
 		}
@@ -112,8 +112,8 @@ public class JillianCharacterController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Alpha2)){
 			currentWeapon = 2; //First weapon "FireBall"
 			currentAttack = fireballProjectile;
-			vials.SetActive (true);
-			fireball.SetActive (false);
+			vials.SetActive (false);
+			fireball.SetActive (true);
 			imp.SetActive (false);
 			fireRate = fireRateFireball;
 		}

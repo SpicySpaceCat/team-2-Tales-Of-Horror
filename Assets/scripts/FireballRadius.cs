@@ -19,6 +19,7 @@ public class FireballRadius : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
+		objectPos = col.transform;
 		Instantiate (firesphere, objectPos.position, objectPos.rotation);
 		Destroy (gameObject);
 	}

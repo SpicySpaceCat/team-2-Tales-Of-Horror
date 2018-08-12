@@ -20,6 +20,7 @@ public class VialRadius : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
+		objectPos = col.transform;
 		Instantiate (sphere, objectPos.position, objectPos.rotation);
 		Destroy (gameObject);
 	}

@@ -133,7 +133,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 			timeToSlash = Time.time + fireRateSlash;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && ammo >= 0 && Time.time > timeToSlash){
+		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && ammo > 0 && Time.time > timeToSlash){
 
 			Instantiate (throwingAxeProjectile, weaponSpawner.position, weaponSpawner.rotation);
 			timeToSlash = Time.time + fireRateAxe;
