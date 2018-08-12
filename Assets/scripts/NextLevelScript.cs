@@ -5,24 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public string myScene;
 
-    void Restart()
+    void LoadScene()
     {
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
+        //Scene loadedLevel = SceneManager.GetActiveScene();
+		SceneManager.LoadScene (myScene);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Restart();
+        LoadScene();
     }
 }
