@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Boss3Script : MonoBehaviour {
+	public GameObject hitSFX;
 	Transform target;
 	Transform x;
 	Transform y;
@@ -130,6 +131,7 @@ public class Boss3Script : MonoBehaviour {
 		//Jillian Attacks
 		if (col.gameObject.tag == "Vial")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 10;
 			if (health <= 0)
 			{
@@ -142,6 +144,7 @@ public class Boss3Script : MonoBehaviour {
 
 		if (col.gameObject.tag == "Fireball")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 60;
 			if (health <= 0)
 			{
@@ -155,6 +158,7 @@ public class Boss3Script : MonoBehaviour {
 		//Johnny Attacks
 		if (col.gameObject.tag == "Fists")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 20;
 			if (health <= 0)
 			{
@@ -167,6 +171,7 @@ public class Boss3Script : MonoBehaviour {
 
 		if (col.gameObject.tag == "Sword")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 40;
 			if (health <= 0)
 			{
@@ -179,6 +184,7 @@ public class Boss3Script : MonoBehaviour {
 
 		if (col.gameObject.tag == "Sword Slash")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 30;
 			if (health <= 0)
 			{
@@ -191,6 +197,7 @@ public class Boss3Script : MonoBehaviour {
 
 		if (col.gameObject.tag == "Axe")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 60;
 			if (health <= 0)
 			{
@@ -203,6 +210,7 @@ public class Boss3Script : MonoBehaviour {
 
 		if (col.gameObject.tag == "Imp Attack")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 10;
 			if (health <= 0)
 			{

@@ -8,6 +8,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 	//---Audio---
 	public GameObject switchSFX;
 	public GameObject throwSFX;
+	public GameObject slashSFX;
 	//---Movement---
 	private float currentSpeed = 6.0f;
 	public float walkSpeed = 6.0f;
@@ -128,13 +129,13 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		//Fire/Attack
 		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon != 3 && Time.time > timeToShoot){
-
+			Instantiate (slashSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (currentAttack, weaponSpawner.position, weaponSpawner.rotation);
 			timeToShoot = Time.time + fireRate;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Mouse1) && currentWeapon == 2 && Time.time > timeToSlash){
-
+			Instantiate (slashSFX, weaponSpawner.position, weaponSpawner.rotation);
 			Instantiate (attackSwordSlash, weaponSpawner.position, weaponSpawner.rotation);
 			timeToSlash = Time.time + fireRateSlash;
 		}

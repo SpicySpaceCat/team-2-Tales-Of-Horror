@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa195d0122cddb4428ca14376a66e0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 1452068849385346, guid: a26e3dcd7534d3c4db648cd6d9c5ed3b, type: 2}
   projectileRange: 8
   meleeRange: 3
   triggerDistance: 12

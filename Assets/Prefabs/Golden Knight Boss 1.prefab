@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f35ff5a259a9e41b3d535ad9c02bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 1452068849385346, guid: a26e3dcd7534d3c4db648cd6d9c5ed3b, type: 2}
   meleeRange: 3
   triggerDistance: 12
   playerDis: 0

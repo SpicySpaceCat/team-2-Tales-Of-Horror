@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AIBrain : MonoBehaviour
 {
-
+	public GameObject hitSFX;
     Transform target;
     Transform x;
     Transform y;
@@ -128,6 +128,7 @@ public class AIBrain : MonoBehaviour
         if (col.gameObject.tag == "Vial")
         {
             health -= 10;
+			Instantiate (hitSFX, transform.position, transform.rotation);
             if (health <= 0)
             {
                 Debug.Log("Dead");
@@ -138,6 +139,7 @@ public class AIBrain : MonoBehaviour
 
         if (col.gameObject.tag == "Fireball")
         {
+			Instantiate (hitSFX, transform.position, transform.rotation);
             health -= 60;
             if (health <= 0)
             {
@@ -150,6 +152,7 @@ public class AIBrain : MonoBehaviour
         //Johnny Attacks
         if (col.gameObject.tag == "Fists")
         {
+			Instantiate (hitSFX, transform.position, transform.rotation);
             health -= 20;
             if (health <= 0)
             {
@@ -161,6 +164,7 @@ public class AIBrain : MonoBehaviour
 
         if (col.gameObject.tag == "Sword")
         {
+			Instantiate (hitSFX, transform.position, transform.rotation);
             health -= 40;
             if (health <= 0)
             {
@@ -172,6 +176,7 @@ public class AIBrain : MonoBehaviour
 
         if (col.gameObject.tag == "Sword Slash")
         {
+			Instantiate (hitSFX, transform.position, transform.rotation);
             health -= 30;
             if (health <= 0)
             {
@@ -183,6 +188,7 @@ public class AIBrain : MonoBehaviour
 
         if (col.gameObject.tag == "Axe")
         {
+			Instantiate (hitSFX, transform.position, transform.rotation);
             health -= 60;
             if (health <= 0)
             {
@@ -194,6 +200,7 @@ public class AIBrain : MonoBehaviour
 
 		if (col.gameObject.tag == "Imp Attack")
 		{
+			Instantiate (hitSFX, transform.position, transform.rotation);
 			health -= 10;
 			if (health <= 0)
 			{

@@ -794,6 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchSFX: {fileID: 1050558518354588, guid: 5b9178f11c6e47546bf853a6117556fe, type: 2}
   throwSFX: {fileID: 1473756573205390, guid: 14598e38884830144b557c851929687c, type: 2}
+  slashSFX: {fileID: 1732057312661602, guid: d0a427d2998b82f4db52b91a34f9918d, type: 2}
   walkSpeed: 6
   sprintSpeed: 10
   healthText: {fileID: 114169671519931946}
@@ -1627,10 +1628,10 @@ RectTransform:
   m_Father: {fileID: 224183479740533294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -188.9}
-  m_SizeDelta: {x: 0, y: -377.8}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 69.899994}
+  m_SizeDelta: {x: 1134, y: 139.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224625206751300202
 RectTransform:
