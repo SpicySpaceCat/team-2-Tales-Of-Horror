@@ -156,7 +156,7 @@ public class JillianCharacterController : MonoBehaviour
 			timeToShoot = Time.time + fireRateFireball;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0) && currentWeapon == 3 && mana == 100){
+		if(Input.GetKeyDown(KeyCode.E) && currentWeapon == 3 && mana == 100){
 			Debug.Log("fire");
 			if (GameObject.Find ("Imp(Clone)")) 
 			{
