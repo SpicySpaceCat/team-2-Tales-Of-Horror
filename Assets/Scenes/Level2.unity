@@ -4221,7 +4221,11 @@ Prefab:
       objectReference: {fileID: 1112439695}
     - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: RainIntensity
-      value: 0.115
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
+      propertyPath: RainMistThreshold
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
@@ -8668,6 +8672,16 @@ Prefab:
     - target: {fileID: 4492308136942918, guid: 8590cad72a8e7df49b055dc8c0b8ec58, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004504533116236, guid: 8590cad72a8e7df49b055dc8c0b8ec58,
+        type: 2}
+      propertyPath: pixelSizeX
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004504533116236, guid: 8590cad72a8e7df49b055dc8c0b8ec58,
+        type: 2}
+      propertyPath: pixelSizeY
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8590cad72a8e7df49b055dc8c0b8ec58, type: 2}
