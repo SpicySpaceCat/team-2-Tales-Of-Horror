@@ -9,6 +9,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 	public GameObject switchSFX;
 	public GameObject throwSFX;
 	public GameObject slashSFX;
+	public GameObject hurtSFX;
 	//---Movement---
 	private float currentSpeed = 6.0f;
 	public float walkSpeed = 6.0f;
@@ -244,6 +245,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//men at arms
 		if (col.gameObject.tag == "Enemy" && armourStat == true) {
 			armour -= 5;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -252,6 +254,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Enemy" && armourStat == false) {
 			health -= 5;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -261,6 +264,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//Projectile enemy
 		if (col.gameObject.tag == "AI Shot" && armourStat == true) {
 			armour -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -269,6 +273,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "AI Shot" && armourStat == false) {
 			health -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -278,6 +283,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//HitScan enemy
 		if (col.gameObject.tag == "AIhitscanbox" && armourStat == true) {
 			armour -= 5;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -286,6 +292,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "AIhitscanbox" && armourStat == false) {
 			health -= 5;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -295,6 +302,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//knight enemy
 		if (col.gameObject.tag == "Melee Knight" && armourStat == true) {
 			armour -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -303,6 +311,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Melee Knight" && armourStat == false) {
 			health -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -312,6 +321,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//Boss 1 Golden Knight
 		if (col.gameObject.tag == "Golden Knight" && armourStat == true) {
 			armour -= 15;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -320,6 +330,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Golden Knight" && armourStat == false) {
 			health -= 15;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -329,6 +340,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//Boss 2 Arthur
 		if (col.gameObject.tag == "Arthur" && armourStat == true) {
 			armour -= 20;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -337,6 +349,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Arthur" && armourStat == false) {
 			health -= 20;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();
@@ -346,6 +359,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 		//Boss 3 Van Helsing
 		if (col.gameObject.tag == "Helsing" && armourStat == true) {
 			armour -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (armour <= 0) {
 				armourStat = false;
 				armour = 0;
@@ -354,6 +368,7 @@ public class JohnnyCharacterController : MonoBehaviour {
 
 		if (col.gameObject.tag == "Helsing" && armourStat == false) {
 			health -= 10;
+			Instantiate (hurtSFX, weaponSpawner.position, weaponSpawner.rotation);
 			if (health <= 0) {
 				Debug.Log ("Dead");
 				Restart();

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TL_LevelCopies/New Level2_Prefabs.unity
     guid: 57bbdc2bb0686fe45951c2645a591ac7
+  - enabled: 1
+    path: Assets/Scenes/TL_LevelCopies/Level3_Prefabs.unity
+    guid: 0579f2ded77c4f2429d825dfd76b49da
   m_configObjects: {}

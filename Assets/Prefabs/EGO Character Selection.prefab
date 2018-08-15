@@ -51,9 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065645278ecbace47b56741db7150266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSound: {fileID: 1786527014349080, guid: 3b01974755c67d7428e953ab601c07a4, type: 2}
   jillian: {fileID: 0}
   johnny: {fileID: 0}
   jillianUI: {fileID: 0}
   johnnyUI: {fileID: 0}
   enemies: {fileID: 0}
+  gamePauser: {fileID: 0}
   buttons: {fileID: 0}

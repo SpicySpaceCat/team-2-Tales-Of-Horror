@@ -856,8 +856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 703b245f98d111d418d988ba74eefbce, type: 3}
-  pixelSizeX: 3
-  pixelSizeY: 3
+  pixelSizeX: 4
+  pixelSizeY: 4
   lockXY: 1
 --- !u!114 &114115322540512538
 MonoBehaviour:
@@ -1179,6 +1179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchSFX: {fileID: 1050558518354588, guid: 5b9178f11c6e47546bf853a6117556fe, type: 2}
   throwSFX: {fileID: 1473756573205390, guid: 14598e38884830144b557c851929687c, type: 2}
+  hurtSFX: {fileID: 1088318822645786, guid: 28e5ab6aa66146444b3ae6f3865e7e25, type: 2}
   walkSpeed: 6
   sprintSpeed: 10
   healthText: {fileID: 114802823950167466}

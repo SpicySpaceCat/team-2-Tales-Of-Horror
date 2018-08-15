@@ -817,7 +817,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "1: Fists\n2: Broadsword\n\tLeft Click: Stab\n\tRight Click: Slash\n3: Throwing
     Axe\nE: When health is below 50 you can eat a Dead enemy to regain health (up
-    maximum of 50)\n\n"
+    to a maximum of 50)\n\n"
 --- !u!222 &378952405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1410,7 +1410,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "1: Vials\n\tLeft Click: Long Throw\n\tRight Click: Short Throw\n2: Fireball\n3:
     Imp\nE: When your mana is 100 and imp is selected press E to summon an Imp. (Only
-    is allowed at any time)\n\n"
+    one is allowed at any time)\n\n"
 --- !u!222 &793139986
 CanvasRenderer:
   m_ObjectHideFlags: 0

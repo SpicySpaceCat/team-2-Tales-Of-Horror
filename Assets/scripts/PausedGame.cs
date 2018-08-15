@@ -9,13 +9,9 @@ public class PausedGame : MonoBehaviour {
 	public JillianCharacterController jillian;
 	public JohnnyCharacterController johnny;
 	// Use this for initialization
-	void Awake()
-	{
-		pauseMenu.SetActive (false);
-	}
 
 	void Start () {
-		
+		pauseMenu.SetActive (false);
 	}
 	
 	// Update is called once per frame

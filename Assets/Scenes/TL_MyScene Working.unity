@@ -2853,12 +2853,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114919260022461924, guid: 72efa11d54c8da84f9998b655c26c3bf,
+    - target: {fileID: 114145715630941440, guid: 72efa11d54c8da84f9998b655c26c3bf,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2146330595}
-    - target: {fileID: 114145715630941440, guid: 72efa11d54c8da84f9998b655c26c3bf,
+    - target: {fileID: 114919260022461924, guid: 72efa11d54c8da84f9998b655c26c3bf,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3986,6 +3986,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 013a04acc2bc02948827cd98424bfde9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1117511316 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1569977660157882, guid: 013a04acc2bc02948827cd98424bfde9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1117511315}
 --- !u!4 &1121675366 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4442570340769622, guid: 41888dc013750be4dabaf0ae17ee0467,
@@ -6375,6 +6380,17 @@ Prefab:
       propertyPath: buttons
       value: 
       objectReference: {fileID: 383532507}
+    - target: {fileID: 114895357391591220, guid: 4061c23841e3b894ea6d8a2074cea6ed,
+        type: 2}
+      propertyPath: gamePauser
+      value: 
+      objectReference: {fileID: 1117511316}
+    - target: {fileID: 114895357391591220, guid: 4061c23841e3b894ea6d8a2074cea6ed,
+        type: 2}
+      propertyPath: startSound
+      value: 
+      objectReference: {fileID: 1786527014349080, guid: 3b01974755c67d7428e953ab601c07a4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4061c23841e3b894ea6d8a2074cea6ed, type: 2}
   m_IsPrefabParent: 0
