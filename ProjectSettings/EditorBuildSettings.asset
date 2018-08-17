@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/TL_MyScene.unity
-    guid: 02b404f5d165d0a44bb9f353fb752388
+    path: Assets/Scenes/TL_MainMenu.unity
+    guid: 9be2bee72cf8abc4fa50a155281911bc
+  - enabled: 1
+    path: Assets/Scenes/TL_Instructions.unity
+    guid: d1bccc75c09b248409e1a7acea4d43af
+  - enabled: 1
+    path: Assets/Scenes/TL_LevelCopies/Level1_Prefabs.unity
+    guid: af42e0e4e584a25478bc27dddc6d861d
+  - enabled: 1
+    path: Assets/Scenes/TL_LevelCopies/New Level2_Prefabs.unity
+    guid: 57bbdc2bb0686fe45951c2645a591ac7
+  - enabled: 1
+    path: Assets/Scenes/TL_LevelCopies/Level3_Prefabs.unity
+    guid: 0579f2ded77c4f2429d825dfd76b49da
   m_configObjects: {}
